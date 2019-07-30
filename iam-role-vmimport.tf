@@ -1,5 +1,5 @@
 resource "aws_iam_role" "vmimport" {
-  name               = "${var.role_name}"
+  name               = var.role_name
   assume_role_policy = <<EOF
 {
    "Version": "2012-10-17",
@@ -17,11 +17,13 @@ resource "aws_iam_role" "vmimport" {
    ]
 }
 EOF
-  tags               = "${var.input_tags}"
+
+
+  tags = var.input_tags
 }
 
 resource "aws_iam_policy" "vmimport" {
-  name        = "${var.role_name}"
+  name = var.role_name
   description = "Policy for ${var.role_name} role"
 
   policy = <<EOF
@@ -53,9 +55,11 @@ resource "aws_iam_policy" "vmimport" {
    ]
 }
 EOF
+
 }
 
 resource "aws_iam_role_policy_attachment" "vmimport" {
-  role       = "${aws_iam_role.vmimport.name}"
-  policy_arn = "${aws_iam_policy.vmimport.arn}"
+role       = aws_iam_role.vmimport.name
+policy_arn = aws_iam_policy.vmimport.arn
 }
+
