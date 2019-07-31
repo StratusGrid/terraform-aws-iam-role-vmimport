@@ -2,7 +2,7 @@
 ```
 module "vmimport" {
   source  = "StratusGrid/iam-role-vmimport/aws"
-  version = "1.0.1"
+  version = "2.0.0"
   # source  = "github.com/StratusGrid/terraform-aws-iam-role-vmimport"
   image_bucket_name = "my-bucket-of-images"
   input_tags        = merge(local.common_tags, {})
