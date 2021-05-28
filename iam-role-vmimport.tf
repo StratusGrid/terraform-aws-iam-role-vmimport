@@ -19,7 +19,7 @@ resource "aws_iam_role" "vmimport" {
 EOF
 
 
-  tags = var.input_tags
+  tags = local.common_tags
 }
 
 resource "aws_iam_policy" "vmimport" {
