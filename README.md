@@ -1,6 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
-# terraform-aws-lambda-pipeline
-GitHub: [StratusGrid/terraform-aws-lambda-pipeline](https://github.com/StratusGrid/terraform-aws-lambda-pipeline)
+# terraform-aws-iam-role-vmimport
+GitHub: [StratusGrid/terraform-aws-iam-role-vmimport](https://github.com/StratusGrid/terraform-aws-iam-role-vmimport)
 ## Example
 ```hcl
 module "vmimport" {
@@ -16,7 +16,7 @@ module "vmimport" {
 - The old naming standard for common files such as inputs, outputs, providers, etc was to prefix them with a `-`, this is no longer true as it's not POSIX compliant. Our pre-commit hooks will fail with this old standard.
 - StratusGrid generally follows the TerraForm standards outlined [here](https://www.terraform-best-practices.com/naming)
 ## Repo Knowledge
-Repository for Module for AWS Lambda CICD
+Repository for Module vmimport
 ## Documentation
 This repo is self documenting via Terraform Docs, please see the note at the bottom.
 ### `LICENSE`
