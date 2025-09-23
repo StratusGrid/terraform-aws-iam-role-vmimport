@@ -35,11 +35,11 @@ resource "aws_iam_policy" "vmimport" {
          "Action":[
             "s3:GetBucketLocation",
             "s3:GetObject",
-            "s3:ListBucket" 
+            "s3:ListBucket"
          ],
          "Resource":[
-            "arn:aws:s3:::${var.image_bucket_name}",
-            "arn:aws:s3:::${var.image_bucket_name}/*"
+            "arn:${var.partition}:s3:::${var.image_bucket_name}",
+            "arn:${var.partition}:s3:::${var.image_bucket_name}/*"
          ]
       },
       {

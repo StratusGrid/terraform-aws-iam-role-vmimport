@@ -15,3 +15,9 @@ variable "input_tags" {
   default     = {}
 }
 
+
+variable "partition" {
+  description = "AWS partition (cf. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html)"
+  type        = string
+  default     = "aws"
+}
